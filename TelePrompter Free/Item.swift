@@ -6,10 +6,10 @@
 //
 
 import Foundation
-import SwiftData
 
-@Model
-final class Item {
+// Este archivo ya no usa SwiftData para mantener la compatibilidad con iOS 14.
+final class Item: Identifiable {
+    var id = UUID()
     var timestamp: Date
     
     init(timestamp: Date) {
